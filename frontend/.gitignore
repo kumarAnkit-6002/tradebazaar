@@ -22,16 +22,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# images & media
-/public/media/
-/public/media/images/
-/public/**/*.png
-/public/**/*.jpg
-/public/**/*.jpeg
-/public/**/*.svg
-/public/**/*.webp
-/src/**/*.png
-/src/**/*.jpg
-/src/**/*.jpeg
-/src/**/*.svg
-/src/**/*.webp
