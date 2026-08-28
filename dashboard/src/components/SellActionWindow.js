@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
 import { watchlist } from "../data/data";
+import { API_URL } from "../apiConfig";
 import "./BuyActionWindow.css";
 
 const SellActionWindow = ({ uid }) => {
@@ -19,7 +20,7 @@ const SellActionWindow = ({ uid }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/allHoldings")
+      .get(`${API_URL}/allHoldings`)
       .then((res) => {
         const holdings = res.data || [];
         const totalQty = holdings
@@ -56,7 +57,7 @@ const SellActionWindow = ({ uid }) => {
     }
 
     try {
-      await axios.post("http://localhost:3002/newOrder", {
+      await axios.post(`${API_URL}/newOrder`, {
         name: uid,
         qty: qtyToSell,
         price: Number(stockPrice),

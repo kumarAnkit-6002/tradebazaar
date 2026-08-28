@@ -53,7 +53,7 @@ const Menu = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     // Redirect to frontend signup/login
-    window.location.href = "http://localhost:3001/signup";
+    window.location.href = "http://localhost:3000/signup";
   };
 
   const getInitials = (name) => {

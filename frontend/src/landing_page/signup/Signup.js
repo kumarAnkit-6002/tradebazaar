@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Signup.css";
 
-const BACKEND_URL = "http://localhost:3002";
+const BACKEND_URL =
+  process.env.REACT_APP_BACKEND_URL || "https://tradebazaarbackend-m9st.onrender.com";
 // Dashboard URL - default to port 3000 or custom origin
-const DASHBOARD_URL = "http://localhost:3000";
+const DASHBOARD_URL =
+  process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
 
 function Signup() {
   const [isLogin, setIsLogin] = useState(false);
