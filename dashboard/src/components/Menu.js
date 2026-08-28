@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FRONTEND_URL } from "../apiConfig";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
@@ -53,7 +54,7 @@ const Menu = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     // Redirect to frontend signup/login
-    window.location.href = "http://localhost:3000/signup";
+    window.location.href = `${FRONTEND_URL}/signup`;
   };
 
   const getInitials = (name) => {
