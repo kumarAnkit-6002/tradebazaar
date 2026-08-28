@@ -3,9 +3,9 @@ import "./Signup.css";
 
 const BACKEND_URL =
   process.env.REACT_APP_BACKEND_URL || "https://tradebazaarbackend-m9st.onrender.com";
-// Dashboard URL - default to port 3000 or custom origin
+// Dashboard URL - default to deployed dashboard on Render
 const DASHBOARD_URL =
-  process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+  process.env.REACT_APP_DASHBOARD_URL || "https://tradebazaar-dashboard-r0vp.onrender.com";
 
 function Signup() {
   const [isLogin, setIsLogin] = useState(false);
